@@ -1,1 +1,16 @@
-<h1>Hola Mundo desde Django - Full Stack</h1>
+{% extends 'base/base.html' %}
+{% load  static %}
+
+{% block content %}
+       
+    <section id="proyectos">
+       {% for proyecto in proyectos %} 
+            <div class="proyecto">
+                <img src="{% static 'img/' %}{{ proyecto.imagen }}" alt="{{ proyecto.nombre }} ">
+                <h2>{{proyecto.nombre}} </h2>
+                <p>{{proyecto.descripcion}}</p>
+                <p>{{proyecto.costo}}</p>
+            </div>    
+       {% endfor %} 
+    </section>    
+{% endblock %}    
