@@ -6,10 +6,12 @@
     <section id="proyectos">
        {% for proyecto in proyectos %} 
             <div class="proyecto">
-                <img src="{% static 'img/' %}{{ proyecto.imagen }}" alt="{{ proyecto.nombre }} ">
-                <h2>{{proyecto.nombre}} </h2>
-                <p>{{proyecto.descripcion}}</p>
-                <p>{{proyecto.costo}}</p>
+                <img src={{proyecto.imagen.url}}>
+                <h2>{{proyecto.tecnologia}}</h2>
+                <p>{{proyecto.lenguaje}}</p>
+                <p>{{proyecto.año}} </p>
+                
+                
             </div>    
        {% endfor %} 
     </section>    
