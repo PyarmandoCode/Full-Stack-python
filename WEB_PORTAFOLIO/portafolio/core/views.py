@@ -2,6 +2,10 @@ from django.shortcuts import render
 from .models import Proyecto,MiPortafolio
 
 
+# def index(request):
+#     template_name="pruebaframeb.html"
+#     miportafolio=MiPortafolio.objects.all()
+#     return render(request,template_name)
 
 def index(request):
     template_name="index.html"
